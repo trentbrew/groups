@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Group Shortcuts",
+  "version": "1.0.0",
+  "description": "Alt+M creates a named tab group. Alt+N groups all tabs sharing the current tab's domain.",
+  "permissions": ["tabs", "tabGroups", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "create-tab-group": {
+      "suggested_key": {
+        "default": "Alt+M"
+      },
+      "description": "Create a tab group and name it"
+    },
+    "group-by-domain": {
+      "suggested_key": {
+        "default": "Alt+N"
+      },
+      "description": "Group all tabs sharing the current tab's domain"
+    }
+  }
+}
